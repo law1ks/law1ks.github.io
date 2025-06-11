@@ -1,0 +1,42 @@
+.btn {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 15px 40px;
+  border: 1px solid @black;
+  outline: none;
+  background-color: transparent;
+  color: @black;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.362;
+  text-align: center;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  overflow: hidden;
+
+  @media @bw650 {
+    font-size: 14px;
+  }
+
+  &--red {
+    border: none;
+    background-color: @red_BC;
+    color: @white;
+
+    &:disabled,
+    &[disabled] {
+      background-color: fade(@red_BC, 50%);
+    }
+  }
+
+  &:hover {
+    @media(hover: hover) {
+      background-color: @black;
+      color: @white;
+    }
+  }
+
+  &:disabled,
+  &[disabled] {
+    pointer-events: none;
+  }
+}

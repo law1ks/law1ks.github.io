@@ -1,0 +1,36 @@
+<article class="event-card @@class">
+  <a href="event.html" class="event-card__link">
+    <picture class="event-card__picture">
+      <source 
+        media="(max-width: 649px)" 
+        type="image/webp" 
+        srcset="@@img_webp">
+      
+      <source media="(max-width: 649px)" srcset="@@img">
+
+      <source 
+        media="(max-width: 1169px)" 
+        type="image/webp" 
+        srcset="@@img_1170vw_webp">
+      
+      <source media="(max-width: 1169px)" srcset="@@img_1170vw">
+
+      <source 
+        media="(max-width: 1659px)" 
+        type="image/webp" 
+        srcset="@@img_1660vw_webp">
+      
+      <source media="(max-width: 1659px)" srcset="@@img_1660vw">
+      
+      <source type="image/webp" srcset="@@img_webp">
+
+      <img src="@@img" alt="@@alt" class="event-card__img">
+    </picture>
+
+    <h4 class="event-card__title">@@title</h4>
+
+    <p class="event-card__description">@@descr</p>
+
+    <time datetime="@@datetime" class="event-card__time">@@time</time>
+  </a>
+</article>

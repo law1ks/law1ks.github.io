@@ -1,0 +1,42 @@
+.upcoming {
+  &__wrapper {
+    padding: 120px 0 84px;
+    background-image: url("../assets/images/home-events.png");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    @media @bw1660 {
+      padding: 100px 0 77px;
+    }
+
+    @media @bw1340{
+      padding: 80px 0 43px;
+    }
+
+    @media @bw768 {
+      padding: 50px 0 40px 0;
+    }
+  }
+
+  &__container {
+    .container();
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    align-self: flex-end;
+    padding: 15px 0 15px 40px;
+
+    @media @bw1340 {
+      margin-right: 30px;
+    }
+
+    @media @bw768 {
+      margin-right: 20px;
+      padding-left: 20px;
+    }
+  }
+}

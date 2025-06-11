@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('blocks/head.html')
+  
+  <body class="body">
+    @@include('blocks/page-header.html')
+
+    <include src="blocks/breadcrumbs.html" class="events__breadcrumbs">
+      <li class="breadcrumbs__item">
+        <a href="/" class="breadcrumbs__item-link link">Главная</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="events.html" class="breadcrumbs__item-link link">Мероприятия</a>
+      </li>
+    </include>
+
+    <button type="button" class="up-down-btn up-down-btn--down" id="js-upDownBtn"></button>
+
+    <main class="main">
+      <div class="events">
+        <section class="listing events__listing">
+          <h2 class="listing__title section-title">Мероприятия</h2>
+        
+          @@include('blocks/events-list.html', { "class": "listing__events-list" })
+
+          @@include('blocks/arrow-link.html', 
+          { 
+            "class": "events__arrow-link",
+            "modifier": "arrow-link--vertical",
+            "title": "Показать еще" 
+          })
+        </section>
+
+        <section class="events__additional-services additional-services">
+          <h2 class="additional-services__title section-title">Дополнительные услуги</h2>
+          <p class="additional-services__label">
+            Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. 
+            Убедившись, что все пожеланию учтены и мы можем приступать к реализациии проекта, 
+            начинается сложная, но интересная работа, результатом которой будет проведение вашего 
+            мероприятия на высшем уровне.
+          </p>
+          <table class="events__price-table table" data-currency="₽" id="js-priceTable">
+            <thead class="table__head">
+              <tr class="table__head-tr">
+                <th class="table__th"></th>
+                <th class="table__th">Тариф «Light»</th>
+                <th class="table__th">Тариф «Promo»</th>
+                <th class="table__th">Тариф «All stars»</th>
+              </tr>
+            </thead>
+            <tbody class="table__body">
+              <tr class="table__tr">
+                <th class="table__body-th">Стоимость за час</th>
+                <td class="table__td">1 000</td>
+                <td class="table__td">3 000</td>
+                <td class="table__td">от 6 000</td>
+              </tr>
+              <tr class="table__tr">
+                <th class="table__body-th">Ведущий мероприятия</th>
+                <td class="table__td"></td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <th class="table__body-th">Фотосъемка</th>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <th class="table__body-th">Видеосъемка</th>
+                <td class="table__td"></td>
+                <td class="table__td"></td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <th class="table__body-th">Организация питания</th>
+                <td class="table__td"></td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <th class="table__body-th">Декор</th>
+                <td class="table__td"></td>
+                <td class="table__td"></td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <th class="table__body-th">Звуковое сопровождение</th>
+                <td class="table__td"></td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <th class="table__body-th">Дополнительное освещение</th>
+                <td class="table__td"></td>
+                <td class="table__td"></td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <th class="table__body-th">Клининг</th>
+                <td class="table__td"></td>
+                <td class="table__td"></td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot class="table__footer">
+              <tr class="table__footer-tr">
+                <th class="table__footer-th"></th>
+                <th class="table__footer-th">Тариф «Light»</th>
+                <th class="table__footer-th">Тариф «Promo»</th>
+                <th class="table__footer-th">Тариф «All Stars»</th>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+
+        @@include('blocks/offers.html', { "class": "events__offers" })
+
+        <section class="info events__info">
+          <div class="info__container">
+            <div class="info__items info__items--vertical">
+              <include src="blocks/info-item.html" class="info__item" width="24" height="24" 
+                       icon="prices">
+                <h4 class="info-item__title">Цены</h4>
+                <p class="info-item__data">
+                  Цены, указанные на сайте носят информационный характер. Мы придерживаемся 
+                  индивидуального подхода в работе с клиентом.
+                </p>
+              </include>
+        
+              <include src="blocks/info-item.html" class="info__item" width="24" height="24" 
+                       icon="contacts">
+                <h4 class="info-item__title">Контакты</h4>
+                <p class="info-item__data">Отдел организации мероприятий</p>
+                <a href="tel:74993500730" class="info-item__data">+7 499 350 0730</a>
+                <a href="mailto:hi@tagree.ru" class="info-item__data">hi@tagree.ru</a>
+              </include>
+        
+              <include src="blocks/info-item.html" class="info__item" width="24" height="24" 
+                       icon="advantage">
+                <h4 class="info-item__title">Преимущество</h4>
+                <p class="info-item__data">
+                  Мы имеем все возможности для того, чтобы помочь как малому бизнесу и молодым 
+                  талантам, так и большим корпорациям и холдингам.
+                </p>
+              </include>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    
+    @@include('blocks/page-footer.html')
+
+    @@include('blocks/event-pp.html')
+
+    <script src="scripts/jquery.selectric.min.js"></script>
+    <script src="scripts/jquery.mask.min.js"></script>
+
+    <script src="scripts/air-datepicker.js"></script>
+
+    <script src="scripts/event-pp-handle.min.js"></script>
+    <script src="scripts/price-table-adapt-for-mobile.min.js"></script>
+  </body>
+</html>

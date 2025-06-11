@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('blocks/head.html')
+  
+  <body class="body">
+    @@include('blocks/page-header.html')
+
+    <button type="button" class="up-down-btn up-down-btn--down" id="js-upDownBtn"></button>
+    
+    <main class="main">
+      <div class="home">
+        <header class="main-header home__main-header">
+          <h1 class="main-header__title">Арт — пространство</h1>
+          <picture class="main-header__picture">
+            <source type="image/webp" srcset="assets/images/lenni.webp">
+
+            <img src="assets/images/lenni.png" alt="lenni" class="main-header__img">
+          </picture>
+          <p class="main-header__text">
+            Для людей, горящих сердцем и делом <br>место для настоящего
+          </p>
+        </header>
+
+        @@include('blocks/offers.html', { "class": "home__offers" })
+
+        @@include('blocks/about.html', { "class": "home__about" })
+
+        @@include('blocks/upcoming.html', { class: "home__upcoming" })
+
+        @@include('blocks/blog-listing.html', { "class": "home__blog-listing" })
+
+        @@include('blocks/contacts.html', { "class": "home__contacts" })
+        
+        <div class="quote home__quote">
+          <span class="quote__first-part">Просто делайте,</span>
+          <span class="quote__second-part">что нравится,</span>
+          <span class="quote__third-part">а мы вам поможем</span>
+        </div>
+      </div>
+    </main>
+    
+    @@include('blocks/page-footer.html')
+
+    @@include('blocks/event-pp.html')
+
+    <script src="https://api-maps.yandex.ru/v3/?lang=ru_RU&apikey=241f717f-c4d7-4209-b383-7144bea54fda"></script>
+
+    <script src="scripts/jquery.selectric.min.js"></script>
+    <script src="scripts/jquery.mask.min.js"></script>
+
+    <script src="scripts/air-datepicker.js"></script>
+    <script src="scripts/swiper.min.js"></script>
+    
+    <script src="scripts/event-pp-handle.min.js"></script>
+    <script src="scripts/main.min.js"></script>
+  </body>
+</html>

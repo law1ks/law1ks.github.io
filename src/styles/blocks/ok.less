@@ -1,0 +1,23 @@
+.ok {
+  position: relative;
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin: auto;
+  border-radius: 50%;
+  background-color: @black;
+
+  &::after {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    display: block;
+    top: 4px;
+    left: 9px;
+    width: 8px;
+    height: 14px;
+    border-bottom: 2px solid @white;
+    border-right: 2px solid @white;
+    transform: rotate(45deg);
+  }
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Lenni Art</title>
+  <meta name="description" content="Арт—пространство для людей, горящих сердцем и делом">
+  <meta name="keywords" content="Lenni Art, пространство, мероприятия">
+
+  <meta property="og:title" content="Lenni Art">
+  <meta property="og:description" content="Арт пространство для людей, горящих сердцем и делом">
+  <meta property="og:image" content="/assets/images/lenni.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lenni-art.ru/">
+
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/favicons/mstile-144x144.png">
+  <meta name="msapplication-config" content="/assets/icons/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="shortcut icon" href="/assets/icons/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicons/favicon-32x32.png">
+
+  <link rel="mask-icon" href="/assets/icons/favicons/safari-pinned-tab.svg" color="#bc3324">
+
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/favicons/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/favicons/android-chrome-192x192.png">
+  <link rel="manifest" href="/assets/icons/favicons/site.webmanifest">
+
+  <link rel="stylesheet" type="text/css" href="styles/styles.min.css?ver=0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+  <script src="scripts/jquery-ui.min.js"></script>
+  <script src="scripts/jquery.validate.min.js"></script>
+  <script defer src="scripts/jquery.validate-init.js"></script>
+
+  <script src="scripts/toastr.min.js"></script>
+
+  <script defer src="scripts/nav-toggle.min.js"></script>
+  <script src="scripts/up-down-scroll.min.js"></script>
+</head>
+
+<body class="body">
+  <header class="page-header" id="js-pageHeader">
+    <div class="page-header__container">
+      <a href="/" class="page-header__logo">
+        <svg class="page-header__logo-icon" width="202" height="147">
+          <use xlink:href="assets/icons/symbols.svg#logo"></use>
+        </svg>
+      </a>
+      <nav class="page-header__nav" id="js-nav">
+        <a href="dist/../events.html" class="page-header__nav-link">Мероприятия</a>
+        <a href="#" class="page-header__nav-link">Блог</a>
+        <a href="#" class="page-header__nav-link">О нас</a>
+        <a href="#" class="page-header__nav-link">Контакты</a>
+
+        <div class="page-header__nav-user">
+          <a href="#" class="page-header__nav-user-link">Александр С.</a>
+
+          <a href="#" class="page-header__nav-logout">
+            <svg class="page-header__nav-logout-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#logout"></use>
+            </svg>
+          </a>
+        </div>
+
+      </nav>
+
+      <div class="page-header__right-block">
+        <a href="#" class="page-header__user-btn">Войти
+          <svg class="page-header__user-icon" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
+          </svg>
+        </a>
+
+        <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
+      </div>
+    </div>
+  </header>
+
+  <include src="blocks/breadcrumbs.html">
+    <li class="breadcrumbs__item">
+      <a href="/" class="breadcrumbs__item-link link">Главная</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__item-link link">Раздел</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__item-link link">Страница раздела</a>
+    </li>
+  </include>
+
+  <main class="main">
+    <article class="article">
+      <div class="article__container">
+        <h1 class="article__title title">Заголовок страницы</h1>
+
+        <div class="article__content content">
+          <h1>Заголовок h1</h1>
+          <h2>Заголовок h2</h2>
+          <h3>Заголовок h3</h3>
+          <h4>Заголовок h4</h4>
+          <h5>Заголовок h5</h5>
+          <h6>Заголовок h6</h6>
+
+          <p>
+            Абзац текста, содержащий <b>жирный</b> текст и
+            <a href="https://tagree.ru/" target="_blank">ссылку</a>
+          </p>
+
+          <ul>
+            <li>Элемент списка 1</li>
+            <li>Элемент списка 2</li>
+            <li>Элемент списка 3</li>
+          </ul>
+
+          <ol>
+            <li>Элемент списка 1</li>
+            <li>Элемент списка 2</li>
+            <li>Элемент списка 3</li>
+          </ol>
+
+          <blockquote>Здесь содержится цитата</blockquote>
+
+          <img src="assets/images/about1_870w.jpg" alt="Подпись картинки">
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__container">
+      <div class="page-footer__border">
+        <div class="page-footer__decoration decoration decoration--invert"></div>
+        <div class="page-footer__decoration decoration"></div>
+      </div>
+
+      <div class="page-footer__wrapper">
+        <div class="page-footer__left-block">
+          <nav class="page-footer__nav">
+            <a href="" class="page-footer__nav-link link">Календарь мероприятий</a>
+            <a href="" class="page-footer__nav-link link">Провести мероприятие</a>
+            <a href="" class="page-footer__nav-link link">Стать арендатором</a>
+            <a href="" class="page-footer__nav-link link">Наши проекты</a>
+            <a href="" class="page-footer__nav-link link">Контакты</a>
+          </nav>
+
+          <div class="page-footer__copyright">© Millennials 2025</div>
+
+          <div class="page-footer__politics">
+            <a href="#" target="_blank" class="page-footer__confidentiality">
+              Политика конфиденциальности
+            </a>
+            <a href="#" target="_blank" class="page-footer__cookies">Cookies</a>
+          </div>
+        </div>
+
+        <div class="page-footer__center-block">
+          <a href="#" target="_blank" rel="nofollow norefferer noopener" class="page-footer__sn-link link">
+            <svg class="page-footer__sn-icon" width="58" height="58">
+              <use xlink:href="assets/icons/symbols.svg#instagram"></use>
+            </svg>
+          </a>
+
+          <a href="#" target="_blank" rel="nofollow norefferer noopener" class="page-footer__sn-link link">
+            <svg class="page-footer__sn-icon" width="58" height="58">
+              <use xlink:href="assets/icons/symbols.svg#vkontakte"></use>
+            </svg>
+          </a>
+        </div>
+
+        <div class="page-footer__right-block">
+          <form action="https://jsonplaceholder.typicode.com/posts" class="page-footer__subscription-form subscription-form" id="js-subscriptionForm">
+            <h4 class="subscription-form__title">Подпишись и будь в курсе происходящего</h4>
+
+            <div class="subscription-form__wrapper">
+              <div class="subscription-form__input-wrapper">
+                <input type="email" name="email" placeholder="Email" class="subscription-form__input" id="#js-subscriptionEmail" required>
+              </div>
+
+              <button type="submit" class="subscription-form__submit">Подписаться</button>
+            </div>
+
+            <label class="subscription-form__check check">
+              <span class="check__label check__label--fsz14 check__label--fw300">
+                Согласен на обработку персональных данных
+              </span>
+              <input type="checkbox" class="check__input" name="agreement" required checked>
+              <span class="check__mark"></span>
+            </label>
+          </form>
+
+          <div class="page-footer__creator">
+            <span class="page-footer__creator-label">Создание и продвижение</span>
+            <a href="https://tagree.ru/" target="_blank" rel="nofollow norefferer noopener" class="page-footer__creator-link">
+              <svg class="page-footer__creator-icon" width="56" height="17">
+                <use xlink:href="assets/icons/symbols.svg#tagree"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

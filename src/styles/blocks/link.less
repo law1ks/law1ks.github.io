@@ -1,0 +1,19 @@
+.link {
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.2s;
+
+  @media @bw768 {
+    font-size: 14px;
+  }
+
+  &:hover {
+    @media(hover: hover) {
+      color: @red_A5;
+    }
+  }
+
+  &:active {
+    color: @red_A5;
+  }
+}

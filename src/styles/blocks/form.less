@@ -1,0 +1,143 @@
+.form {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 60px;
+    width: 100%;
+
+    &--mb50 {
+      margin-bottom: 50px;
+
+      @media @bw650 {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media @bw1340 {
+      gap: 3.906vw;
+    }
+
+    @media @bw650 {
+      gap: 0;
+    }
+  }
+
+  &__field {
+    display: block;
+    width: 100%;
+
+    &--w50 {
+      width: calc(50% - 30px);
+
+      @media @bw1340 {
+        width: calc(50% - 1.953vw);
+      }
+
+      @media @bw650 {
+        width: 100%;
+        margin-bottom: 30px;
+        font-weight: 400;
+      }
+    }
+
+    &--mb30 {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__group {
+    width: calc(50% - 30px);
+
+    @media @bw1340 {
+      width: calc(50% - 1.953vw);
+    }
+
+    @media @bw650 {
+      width: 100%;
+      margin: 23px 0 30px 0;
+    }
+
+    .field__title {
+      @media @bw650 {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__section {
+    display: block;
+    width: 100%;
+
+    .field__title,
+    .field__label--textarea {
+      @media @bw650 {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__check {
+    &--mb38 {
+      margin-bottom: 38px;
+
+      @media @bw1020 {
+        padding-left: 42px;
+      }
+
+      @media @bw768 {
+        padding-left: 40px;
+      }
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 200px;
+
+    @media @bw1340 {
+      gap: 15.104vw;
+    }
+
+    @media @bw650 {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__submit-btn {
+    width: 100%;
+    max-width: 401px;
+    max-height: 50px;
+    padding: 15px 156px;
+
+    @media @bw1340 {
+      width: 37.63vw;
+      padding: 15px 100px;
+    }
+
+    @media @bw650 {
+      width: 100%;
+      max-height: 49px;
+      padding: 15px 81px;
+    }
+  }
+
+  &__close-btn {
+    border: none;
+    outline: none;
+    padding: 4px 1px;
+    text-decoration: underline;
+
+    @media @bw650 {
+      padding: 5px 40px;
+    }
+
+    &:hover {
+      @media(hover: hover) {
+        background-color: initial;
+        color: @red_A5;
+      }
+    }
+  }
+}

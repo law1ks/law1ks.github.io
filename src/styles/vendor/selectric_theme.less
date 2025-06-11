@@ -1,0 +1,93 @@
+.selectric-wrapper {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 27px;
+    width: 6px;
+    height: 2px;
+    background-color: @black;
+    transition: transform 0.2s;
+    z-index: 10;
+  }
+
+  &::before {
+    right: 30px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    right: 26px;
+    transform: rotate(-45deg);
+  }
+}
+
+.selectric-open {
+  z-index: 10;
+
+  &.selectric-wrapper {
+    &:before {
+      transform: rotate(-45deg);
+    }
+
+    &:after {
+      transform: rotate(45deg);
+    }
+  }
+
+  & .selectric-items {
+    display: block;
+    margin-top: 5px;
+    width: 100% !important;
+  }
+}
+
+.selectric {
+  height: 55px;
+  border-radius: 5px;
+  border: none;
+  background-color: @white;
+
+  & .button {
+    display: none;
+  }
+
+  & .label {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 20px;
+    padding: 17px 0 16px;
+    font-size: 16px;
+    line-height: 1;
+
+    @media @bw400 {
+      font-size: 14px;
+    }
+  }
+}
+
+.selectric-items {
+  border-radius: 5px;
+  border: none;
+  background-color: @white;
+  box-shadow: 0 0 20px rgba(0.0, 0.0, 0.0, 0.2);
+  overflow: hidden;
+
+  & .selectric-scroll {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  & li {
+    padding: 10px 23px;
+    font-size: 16px;
+
+    @media @bw400 {
+      font-size: 14px;
+    }
+  }
+}

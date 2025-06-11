@@ -1,0 +1,107 @@
+.contacts-item {
+    display: flex;
+    align-items: center;
+    gap: 54px;
+
+    @media @bw1340{
+        gap: 65px;
+    }
+
+    @media @bw1170 {
+        flex-direction: column;
+        min-width: 194.17px;
+        margin: 0 auto;
+        gap: 30px;
+    }
+
+    @media @bw650 {
+        flex-direction: row;
+        min-width: none;
+        margin: 0 0 44px 0;
+    }
+
+    &:last-child {
+        @media @bw650 {
+            margin-bottom: 0;
+        }
+    }
+
+    &--fdcol {
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 110px;
+        height: 110px;
+        background-color: @black;
+
+        @media @bw650 {
+            width: 65px;
+            height: 65px;
+        }
+    }
+    &__title {
+        margin: 0 0 10px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: normal;
+        color: @black;
+
+        @media @bw1170 {
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        @media @bw650 {
+            font-size: 14px;
+            font-weight: 600;
+            text-align: left;
+        }
+    }
+    &__info {
+        display: block;
+        margin: 0 0 5px;
+        font-weight: 400;
+        font-size: 16px;
+
+        @media @bw1170 {
+            text-align: center;
+        }
+
+        @media @bw650 {
+            margin: 0;
+            font-size: 14px;
+            text-align: left;
+        }
+
+
+        &--mw401 {
+            max-width: 401px;
+        }
+        &--tacenter {
+            text-align: center;
+        }
+        &[href] {
+            transition: color 0.2s;
+            text-decoration: none;
+
+            &:hover {
+                @media (hover: hover) {
+                    color: @red;
+                }
+            }
+            &:active {
+                color: @red;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

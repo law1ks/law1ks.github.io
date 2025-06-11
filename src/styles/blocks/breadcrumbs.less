@@ -1,0 +1,40 @@
+.breadcrumbs {
+  @media @bw450 {
+    display: none;
+  }
+
+  &__container {
+    .container();
+  }
+
+  &__items {
+    list-style: none;
+    font-size: 16px;
+
+    @media @bw960 {
+      font-size: 14px;
+    }
+  }
+
+  &__item {
+    display: inline;
+
+    &:first-child {
+      margin-right: 4px;
+    }
+  }
+
+  &__item + &__item {
+    &::before {
+      content: "/";
+    }
+  }
+
+  &__item-link {
+    font-weight: 400;
+
+    @media @bw1020 {
+      font-size: 14px;
+    }
+  }
+}

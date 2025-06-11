@@ -1,0 +1,124 @@
+.field {
+  &__title {
+    margin: 0 0 10px;
+    color: @black;
+    font-family: @font1;
+    font-weight: 700;
+    font-size: 18px;
+
+    &--mb7 {
+      margin-bottom: 7px;
+    }
+  }
+
+  &__select,
+  &__input,
+  &__textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 17px 20px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: @white;
+    color: @black;
+  }
+
+  &__select,
+  &__input {
+    height: 55px;
+  }
+
+  &__select {
+    appearance: none;
+  }
+
+  &__date,
+  &__date-inputs {
+    display: flex;
+    width: 100%;
+  }
+
+  &__date {
+    position: relative;
+    flex-direction: column;
+    max-width: 251px;
+  }
+
+  &__date-inputs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 55px;
+    pointer-events: none;
+  }
+
+  &__date-input {
+    display: block;
+    box-sizing: border-box;
+    width: 55px;
+    height: 55px;
+    margin-right: 15px;
+    padding: 0 5px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.375;
+    text-align: center;
+    pointer-events: none;
+
+    &--year {
+      flex-grow: 1;
+      margin-right: 0;
+    }
+  }
+
+  &__date-picker {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 55px;
+    max-width: 250px;
+    border: 0;
+    border-radius: 5px;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  &__label {
+    display: block;
+    margin-bottom: 5px;
+    color: @black;
+
+    &--textarea {
+      margin: 0 0 10px;
+      color: @black;
+      font-family: @font1;
+      font-weight: 700;
+      font-size: 18px;
+
+      @media @bw1340 {
+        margin-bottom: 12px;
+      }
+
+      @media @bw650 {
+        max-width: 95.833%;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__input {
+    // @media @bw650 {
+    //   margin-bottom: 30px;
+    // }
+  }
+
+  &__textarea {
+    height: 149px;
+
+    @media @bw650 {
+      height: 234px;
+    }
+  }
+}

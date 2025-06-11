@@ -1,0 +1,36 @@
+.info-map {
+  display: block;
+  width: 100%;
+  max-width: 752px;
+
+  &__wrapper {
+    .responsive-parent(@after-pt: 65.559%);
+
+    @media @bw1340 {
+      .responsive-parent(@after-pt: 65.395%);
+    }
+
+    @media @bw768 {
+      .responsive-parent(@after-pt: 66.429%);
+    }
+  }
+
+  &__content {
+    .responsive-child();
+  }
+
+  &__placemark {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__marker {
+    width: 9px;
+    height: 9px;
+    max-width: initial;
+  }
+
+  &__marker-icon {
+    padding: 0 0 14px 3px;
+  }
+}

@@ -1,0 +1,49 @@
+.scene {
+  &__table {
+    cursor: pointer;
+
+    &--red {
+      .scene__table-group {
+        stroke: @red_BC;
+      }
+
+      .scene__table-num {
+        fill: @red_BC;
+      }
+    }
+
+    &--active {
+      .scene__table-group {
+        fill: @black;
+      }
+
+      .scene__table-num {
+        fill: @white;
+      }
+
+      &.scene__table--red {
+        .scene__table-group {
+          fill: @red_A5;
+          stroke: @red_A5;
+        }
+      }
+    }
+    
+    &--disabled {
+      pointer-events: none;
+
+      .scene__table-group {
+        stroke: @gray_BF;
+        fill: @gray_BF;
+      }
+    }
+  }
+
+  &__table-group {
+    stroke: @black;
+  }
+
+  &__table-num {
+    fill: @black;
+  }
+}

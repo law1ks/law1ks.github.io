@@ -1,0 +1,48 @@
+.main-text {
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  width: calc(100% + 189px + 52px);
+  max-width: 1980px;
+
+  @media @bw1340 {
+    width: calc(100% + 141px + 38px);
+    max-width: 1519px;
+  }
+  @media @bw768 {
+    width: calc(100% + 101px + 26px);
+    max-width: 895px;
+  }
+  @media @bw370 {
+    width: calc(100% + 69px + 57px);
+    max-width: 1980px;
+  }
+
+  &__p {
+    margin: 0 0 0 -52px;
+    font-family: 'Mak', sans-serif;
+    font-weight: bold;
+    font-size: 120px;
+    line-height: 120%;
+
+    @media @bw1340 {
+      margin: 0 0 0 -38px;
+      font-size: 90px;
+    }
+    @media @bw768 {
+      margin: 0 0 0 -26px;
+      font-size: 80px;
+    }
+    @media @bw600 {
+      margin: 0 0 0 -57px;
+      font-size: 40px;
+    }
+
+    &.end {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+}
